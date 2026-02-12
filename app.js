@@ -160,6 +160,14 @@
   });
 
   /* ─────────────────────────────────────────
+     5b. TERRAFORMING VIDEOS — Hover to Play
+     ───────────────────────────────────────── */
+  $$('.terraforming-video').forEach((video) => {
+    video.addEventListener('mouseenter', () => video.play());
+    video.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+  });
+
+  /* ─────────────────────────────────────────
      6. CRT RANDOM FLICKER
      ───────────────────────────────────────── */
   const crtFlicker = $('.crt-flicker');
