@@ -763,6 +763,9 @@ ul {
 
 /* Orb shared */
 .skill-orb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 8px 18px;
     border-radius: 40px;
     font-family: var(--font-mono);
@@ -771,6 +774,18 @@ ul {
     cursor: default;
     transition: all 0.4s var(--ease-out);
     position: relative;
+}
+
+/* Icon inside orb */
+.skill-orb__icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: filter 0.4s var(--ease-out);
+}
+
+.skill-orb:hover .skill-orb__icon {
+    filter: drop-shadow(0 0 6px var(--brand, #fff)) drop-shadow(0 0 14px var(--brand, #fff));
 }
 
 /* BEDROCK — heavy geometric style */
