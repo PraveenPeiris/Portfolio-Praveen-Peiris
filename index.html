@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen Peiris — Digital Twin</title>
+    <meta name="description" content="Praveen Peiris — Associate Technical Lead. Full-stack engineer specializing in Java, Spring, Python, AI/ML pipelines, and modern cloud architectures.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- NAV -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <nav id="main-nav" class="nav">
+        <a href="#hero" class="nav__logo">PP<span class="nav__logo-dot">.</span></a>
+        <div class="nav__links">
+            <a href="#about" class="nav__link">About</a>
+            <a href="#timeline" class="nav__link">Career</a>
+            <a href="#skills" class="nav__link">Skills</a>
+            <a href="#offline" class="nav__link">Offline</a>
+            <a href="#contact" class="nav__link">Contact</a>
+        </div>
+        <button id="nav-toggle" class="nav__toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION 1 — HERO -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="hero" class="hero">
+        <canvas id="hero-particles" class="hero__particles"></canvas>
+        <div class="hero__content">
+            <div class="hero__image-wrapper" data-depth="0.3">
+                <div class="hero__image-glow"></div>
+                <img src="assets/main_profile_img.jpeg" alt="Praveen Peiris" class="hero__image" />
+                <div class="hero__image-ring"></div>
+                <div class="hero__image-ring hero__image-ring--2"></div>
+            </div>
+            <div class="hero__text">
+                <p class="hero__greeting reveal-text">Hello, I'm</p>
+                <h1 class="hero__name reveal-text">Praveen<br><span class="hero__name--accent">Peiris</span></h1>
+                <p class="hero__title reveal-text">Associate Technical Lead</p>
+                <p class="hero__tagline reveal-text">Building the future at the intersection of<br>enterprise systems &amp; artificial intelligence</p>
+                <div class="hero__cta reveal-text">
+                    <a href="#timeline" class="btn btn--primary">Explore My Orbit</a>
+                    <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION 2 — ABOUT -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section__label reveal-up">// ABOUT ME</div>
+            <div class="about__grid">
+                <div class="about__image-col reveal-up">
+                    <div class="about__image-frame">
+                        <img src="assets/Main_Cover_img.jpeg" alt="Praveen Peiris" class="about__image" />
+                    </div>
+                </div>
+                <div class="about__text-col reveal-up">
+                    <h2 class="section__title">Crafting Systems<br>That <span class="text-gradient">Scale</span></h2>
+                    <p class="about__bio">
+                        Results-driven Associate Tech Lead with 4+ years of experience in full-stack development, 
+                        transitioning seamlessly between legacy enterprise systems (Java, Spring Framework, Spring JPA) 
+                        and modern cloud architectures (Node.js/TypeScript, Python/FastAPI).
+                    </p>
+                    <p class="about__bio">
+                        Proficient in architecting and deploying scalable AI/ML pipelines, including implementing 
+                        Multi-Step/Agentic RAG frameworks with LLMs (Gemini/OpenAI), and managing advanced data systems 
+                        like DGraph and Qdrant. Experienced in optimizing system performance through code profiling and 
+                        query tuning.
+                    </p>
+                    <div class="about__stats">
+                        <div class="about__stat">
+                            <span class="about__stat-number">4+</span>
+                            <span class="about__stat-label">Years Experience</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number">2</span>
+                            <span class="about__stat-label">Publications</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number">5</span>
+                            <span class="about__stat-label">Promotions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION 3 — CAREER TIMELINE -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="timeline" class="timeline section">
+        <div class="container">
+            <div class="section__label reveal-up">// CAREER TRAJECTORY</div>
+            <h2 class="section__title reveal-up">Professional <span class="text-gradient">Orbit</span></h2>
+            <div class="timeline__track">
+                <div class="timeline__line"></div>
+
+                <!-- Era: School -->
+                <div class="timeline__entry reveal-up" data-era="school">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__date">2003 — 2018</span>
+                        <h3 class="timeline__role">Advance Level (A/L), Physical Stream</h3>
+                        <h4 class="timeline__company">St. Sebastian's College, Moratuwa</h4>
+                        <p class="timeline__desc">Physics - B, Combined Mathematics - B, Chemistry - C. Senior Prefect (2014-2016).</p>
+                        <div class="timeline__gallery">
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/school_img_1.jpeg" alt="School days" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/school_img_2.jpeg" alt="School days" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/school_img_3.jpeg" alt="School days" class="timeline__img" loading="lazy"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Era: University -->
+                <div class="timeline__entry timeline__entry--right reveal-up" data-era="university">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__date">2020 — 2023</span>
+                        <h3 class="timeline__role">BSc in Information Technology</h3>
+                        <h4 class="timeline__company">SLIIT — Sri Lanka Institute of Information Technology</h4>
+                        <p class="timeline__desc">Specializing in Software Engineering. Co-authored an IEEE publication on YouTube User Engagement analysis (ITNAC 2023, Melbourne) and a journal on Fuel Management Systems (IJEMR).</p>
+                        <div class="timeline__gallery">
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/uni_img_1.jpeg" alt="University" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/uni_img_2.jpeg" alt="University" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/uni_img_3.jpeg" alt="University" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/uni_img_4.jpeg" alt="University" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/uni_img_5.jpeg" alt="University" class="timeline__img" loading="lazy"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Era: Intern -->
+                <div class="timeline__entry reveal-up" data-era="work">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__date">Oct 2021 — Jul 2022</span>
+                        <h3 class="timeline__role">Intern Software Engineer</h3>
+                        <h4 class="timeline__company">Avtra, Kohuwala</h4>
+                        <ul class="timeline__list">
+                            <li>Contributed to inventory and ancillary service features in the PSS, including seat selection, SSR, meals, and baggage handling</li>
+                            <li>Rapidly adapted to enterprise-grade Java/Spring/Hibernate architecture, earning promotion 2 months ahead of schedule</li>
+                        </ul>
+                        <div class="timeline__gallery">
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/avtra_img_1.jpeg" alt="Avtra" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/avtra_img_2.jpeg" alt="Avtra" class="timeline__img" loading="lazy"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Era: Associate SE -->
+                <div class="timeline__entry timeline__entry--right reveal-up" data-era="work">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__date">Aug 2022 — Jul 2023</span>
+                        <h3 class="timeline__role">Associate Software Engineer</h3>
+                        <h4 class="timeline__company">Avtra, Kohuwala</h4>
+                        <ul class="timeline__list">
+                            <li>Fixed critical issues promptly, maintaining high system availability</li>
+                            <li>Supported PSS enhancements in inventory, booking, and ancillary flows</li>
+                            <li>Participated in live release rollouts and on-call rotations</li>
+                            <li>Gained deep expertise in the PSS booking model</li>
+                        </ul>
+                        <div class="timeline__gallery">
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/avtra_img_3.jpeg" alt="Avtra" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/avtra_img_4.jpeg" alt="Avtra" class="timeline__img" loading="lazy"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Era: SE -->
+                <div class="timeline__entry reveal-up" data-era="work">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__date">Aug 2023 — Sep 2024</span>
+                        <h3 class="timeline__role">Software Engineer</h3>
+                        <h4 class="timeline__company">Avtra, Kohuwala</h4>
+                        <ul class="timeline__list">
+                            <li>Delivered a high-impact MRL passport scanning feature, reducing manual processing by 95%</li>
+                            <li>Implemented new inventory and ancillary modules for airline clients</li>
+                            <li>Supported live production deployments via Jenkins and Linux servers</li>
+                        </ul>
+                        <div class="timeline__gallery">
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/avtra_img_5.jpeg" alt="Avtra" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/avtra_img_6.jpeg" alt="Avtra" class="timeline__img" loading="lazy"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Era: Senior SE -->
+                <div class="timeline__entry timeline__entry--right reveal-up" data-era="work">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <span class="timeline__date">Oct 2024 — Sep 2025</span>
+                        <h3 class="timeline__role">Senior Software Engineer</h3>
+                        <h4 class="timeline__company">Avtra, Kohuwala</h4>
+                        <ul class="timeline__list">
+                            <li>Led critical PSS modules and external service integrations (GDS, Interline, Codeshare)</li>
+                            <li>Architected EDIFACT and AIRIMP messaging for Type A & B aviation standards</li>
+                            <li>Managed end-to-end live release processes and optimized IBM MQ/MATIP clients</li>
+                            <li>Led large-scale PL/SQL data migrations for new airline onboarding</li>
+                            <li>Conducted thorough code reviews and mentored cross-functional teams</li>
+                            <li>Granted two promotions — Intern to Associate SE and SE to Senior SE — ahead of schedule</li>
+                        </ul>
+                        <div class="timeline__gallery">
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/avtra_img_7.jpeg" alt="Avtra" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/avtra_img_8.jpeg" alt="Avtra" class="timeline__img" loading="lazy"/>
+                            </div>
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/avtra_img_9.jpeg" alt="Avtra" class="timeline__img" loading="lazy"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Era: Associate Tech Lead -->
+                <div class="timeline__entry reveal-up" data-era="lead">
+                    <div class="timeline__dot timeline__dot--active"></div>
+                    <div class="timeline__card timeline__card--highlight">
+                        <span class="timeline__date">Oct 2025 — Present</span>
+                        <h3 class="timeline__role">Associate Tech Lead</h3>
+                        <h4 class="timeline__company">HashBaze, Sri Lanka</h4>
+                        <ul class="timeline__list">
+                            <li>Led the design and deployment of a mission-critical Python FastAPI service as the single API gateway for AI/ML operations</li>
+                            <li>Implemented a dual-vendor LLM strategy (Google Vertex AI/Gemini + Azure OpenAI)</li>
+                            <li>Designed a Multi-Step/Agentic RAG (Map-Reduce) pipeline using LangGraph</li>
+                            <li>Architected unified data flow connecting AWS Textract, Qdrant, and DGraph</li>
+                            <li>Built a Request Tracker and Crawler using Dgraph's Graph Database for real-time legal document indexing</li>
+                            <li>Led full-stack image-analysis platform development for board game strategy</li>
+                            <li>Implemented AuthN/AuthZ with AWS Cognito and end-to-end Stripe payment integration</li>
+                        </ul>
+                        <div class="timeline__gallery">
+                            <div class="timeline__img-wrap distortion-wrap">
+                                <img src="assets/Hashbaze_img_1.jpeg" alt="HashBaze" class="timeline__img" loading="lazy"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION 4 — SKILLS -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section__label reveal-up">// TECH CONSTELLATION</div>
+            <h2 class="section__title reveal-up">Skills <span class="text-gradient">Universe</span></h2>
+            <p class="skills__subtitle reveal-up">Hover to attract the orbs into your orbit</p>
+            <canvas id="skills-canvas" class="skills__canvas"></canvas>
+            <div class="skills__list" aria-label="Skills list">
+                <span>Java</span><span>JavaScript</span><span>TypeScript</span><span>Python</span>
+                <span>Spring</span><span>React</span><span>Next.js</span><span>Node.js</span>
+                <span>Oracle SQL</span><span>MySQL</span><span>DGraph</span><span>Qdrant</span>
+                <span>AI/LLM</span><span>LangGraph</span><span>Docker</span><span>AWS</span>
+                <span>Jenkins</span><span>Git</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION 5 — ACHIEVEMENTS -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="achievements" class="achievements section">
+        <div class="container">
+            <div class="section__label reveal-up">// MILESTONES</div>
+            <h2 class="section__title reveal-up">Notable <span class="text-gradient">Achievements</span></h2>
+            <div class="achievements__grid">
+                <div class="achievement-card reveal-up">
+                    <div class="achievement-card__icon">🏆</div>
+                    <h3 class="achievement-card__title">Algothon 2021 Finalist</h3>
+                    <p class="achievement-card__desc">Selected from over 1,500 applicants at SLIIT, placed among the top 300 participants and advanced to the final round.</p>
+                </div>
+                <div class="achievement-card reveal-up">
+                    <div class="achievement-card__icon">📄</div>
+                    <h3 class="achievement-card__title">IEEE Publication</h3>
+                    <p class="achievement-card__desc">Co-authored a paper on YouTube User Engagement analysis, presented at ITNAC 2023, Melbourne, Australia. Published in IEEE Xplore.</p>
+                </div>
+                <div class="achievement-card reveal-up">
+                    <div class="achievement-card__icon">📰</div>
+                    <h3 class="achievement-card__title">IJEMR Journal</h3>
+                    <p class="achievement-card__desc">Co-authored a journal publication on an Efficient Fuel Management System for the Sri Lankan fuel crisis, published in IJEMR.</p>
+                </div>
+                <div class="achievement-card reveal-up">
+                    <div class="achievement-card__icon">🎖️</div>
+                    <h3 class="achievement-card__title">AIESEC LEAD Top 8</h3>
+                    <p class="achievement-card__desc">Chosen from 100+ applicants to collaborate with the National Blood Bank on developing a procurement system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION 6 — OFFLINE MODE (PERSONAL ORBIT) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <div class="offline-transition section" id="offline">
+        <div class="offline-transition__inner reveal-up">
+            <div class="offline-transition__glitch" data-text="// OFFLINE MODE">// OFFLINE MODE</div>
+            <p class="offline-transition__sub">Switching to personal frequencies&hellip;</p>
+            <div class="offline-transition__line"></div>
+        </div>
+    </div>
+
+    <section class="personal section">
+        <div class="container">
+
+            <!-- TERRAFORMING — Planting -->
+            <div class="hobby-card hobby-card--terraforming reveal-up">
+                <div class="hobby-card__header">
+                    <span class="hobby-card__tag">TERRAFORMING PROJECT</span>
+                    <span class="hobby-card__status">STATUS: ACTIVE 🌱</span>
+                </div>
+                <h3 class="hobby-card__title">Project: 600 Dark Green Scotch Bonnet<br><span class="text-gradient">Nai Miris Plants</span></h3>
+                <p class="hobby-card__desc">Cultivating a fleet of 600 Scotch Bonnet Nai Miris pepper plants. Each one documented like a specimen in a terraforming mission log.</p>
+                <div class="hobby-card__gallery">
+                    <div class="terraforming-log">
+                        <div class="terraforming-log__img-wrap">
+                            <img src="assets/hobby_planting_naiMiris_img_1.jpeg" alt="Nai Miris cultivation" loading="lazy"/>
+                        </div>
+                        <div class="terraforming-log__meta">
+                            <span class="terraforming-log__id">LOG-001</span>
+                            <span class="terraforming-log__label">Seedling Phase</span>
+                        </div>
+                    </div>
+                    <div class="terraforming-log">
+                        <div class="terraforming-log__img-wrap">
+                            <img src="assets/hobby_planting_naiMiris_img_2.jpeg" alt="Nai Miris cultivation" loading="lazy"/>
+                        </div>
+                        <div class="terraforming-log__meta">
+                            <span class="terraforming-log__id">LOG-002</span>
+                            <span class="terraforming-log__label">Growth Monitoring</span>
+                        </div>
+                    </div>
+                    <div class="terraforming-log">
+                        <div class="terraforming-log__img-wrap">
+                            <img src="assets/hobby_planting_naiMiris_img_3.jpeg" alt="Nai Miris cultivation" loading="lazy"/>
+                        </div>
+                        <div class="terraforming-log__meta">
+                            <span class="terraforming-log__id">LOG-003</span>
+                            <span class="terraforming-log__label">Harvest Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MARTIAL ARTS — Jeet Kune Do -->
+            <div class="hobby-card hobby-card--martial reveal-up">
+                <div class="hobby-card__header">
+                    <span class="hobby-card__tag">DISCIPLINE PROTOCOL</span>
+                    <span class="hobby-card__status">TRAINING: ONGOING 🥋</span>
+                </div>
+                <h3 class="hobby-card__title">Jeet Kune Do<br><span class="text-gradient">The Way of the Intercepting Fist</span></h3>
+                <p class="hobby-card__desc">"Be water, my friend." — Practicing Bruce Lee's martial arts philosophy, blending speed, efficiency, and adaptability.</p>
+                <div class="hobby-card__gallery hobby-card__gallery--compact">
+                    <div class="martial-img-wrap">
+                        <img src="assets/hobby_jeet_kune_do.jpeg" alt="Jeet Kune Do" loading="lazy"/>
+                    </div>
+                    <div class="martial-img-wrap">
+                        <img src="assets/hobby_jeet_kune_do_2.jpeg" alt="Jeet Kune Do" loading="lazy"/>
+                    </div>
+                    <div class="martial-img-wrap">
+                        <img src="assets/hobby_jeet_kune_do_3.jpeg" alt="Jeet Kune Do" loading="lazy"/>
+                    </div>
+                    <div class="martial-img-wrap">
+                        <img src="assets/hobby_jeet_kune_do_4.jpeg" alt="Jeet Kune Do" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTIVE STATUS — Badminton -->
+            <div class="hobby-card hobby-card--badminton reveal-up" id="badminton-card">
+                <div class="hobby-card__header">
+                    <span class="hobby-card__tag">ACTIVE STATUS</span>
+                    <span class="hobby-card__status">RECURRING 🏸</span>
+                </div>
+                <h3 class="hobby-card__title">Badminton <span class="text-gradient">Sessions</span></h3>
+                <div class="badminton-schedule">
+                    <div class="badminton-schedule__slot">
+                        <div class="badminton-schedule__day">MON</div>
+                        <div class="badminton-schedule__time">9:00 PM — 11:00 PM</div>
+                        <div class="badminton-schedule__bar">
+                            <div class="badminton-schedule__fill" style="width: 66%"></div>
+                        </div>
+                    </div>
+                    <div class="badminton-schedule__slot">
+                        <div class="badminton-schedule__day">SAT</div>
+                        <div class="badminton-schedule__time">6:00 PM — 9:00 PM</div>
+                        <div class="badminton-schedule__bar">
+                            <div class="badminton-schedule__fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shuttlecock-trail" aria-hidden="true">
+                    <svg viewBox="0 0 200 80" class="shuttlecock-svg">
+                        <path d="M10,70 Q60,5 110,40 T190,15" fill="none" stroke="url(#shuttle-grad)" stroke-width="2" stroke-dasharray="5,5"/>
+                        <defs>
+                            <linearGradient id="shuttle-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+                                <stop offset="50%" stop-color="#6366f1"/>
+                                <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="190" cy="15" r="4" fill="#a78bfa" class="shuttlecock-dot"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- WATCHLIST — TV Series -->
+            <div class="hobby-card hobby-card--watchlist reveal-up" id="watchlist-card">
+                <div class="hobby-card__header">
+                    <span class="hobby-card__tag">NOW PLAYING</span>
+                    <span class="hobby-card__status hobby-card__status--live">● LIVE</span>
+                </div>
+                <div class="watchlist">
+                    <div class="watchlist__screen crt-effect">
+                        <div class="crt-scanlines"></div>
+                        <div class="crt-flicker"></div>
+                        <div class="watchlist__show-info">
+                            <h3 class="watchlist__show-title">LOST</h3>
+                            <p class="watchlist__show-meta">Season 5 · Episode 12</p>
+                            <p class="watchlist__show-ep-name">"Dead Is Dead"</p>
+                        </div>
+                    </div>
+                    <div class="watchlist__progress">
+                        <div class="watchlist__progress-label">
+                            <span>Series Progress</span>
+                            <span class="watchlist__progress-pct">78%</span>
+                        </div>
+                        <div class="watchlist__progress-bar">
+                            <div class="watchlist__progress-fill" style="width: 78%"></div>
+                            <div class="watchlist__progress-glow" style="left: 78%"></div>
+                        </div>
+                        <div class="watchlist__progress-detail">
+                            <span>S5 E12 of 6 Seasons (121 Episodes)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION 7 — FOOTER / CONTACT -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <footer id="contact" class="footer section">
+        <div class="container">
+            <div class="section__label reveal-up">// ESTABLISH CONNECTION</div>
+            <h2 class="section__title reveal-up">Let's Build <span class="text-gradient">Together</span></h2>
+            <div class="footer__links reveal-up">
+                <a href="mailto:praveenpeiris25@gmail.com" class="footer__link">
+                    <span class="footer__link-label">Email</span>
+                    <span class="footer__link-value">praveenpeiris25@gmail.com</span>
+                </a>
+                <a href="tel:+94712131985" class="footer__link">
+                    <span class="footer__link-label">Phone</span>
+                    <span class="footer__link-value">+94-712131985</span>
+                </a>
+                <a href="https://www.linkedin.com/in/praveen-dhana-prz" target="_blank" rel="noopener" class="footer__link">
+                    <span class="footer__link-label">LinkedIn</span>
+                    <span class="footer__link-value">praveen-dhana-prz</span>
+                </a>
+            </div>
+            <div class="footer__bottom reveal-up">
+                <p>&copy; 2026 Praveen Peiris. Designed with anti-gravity.</p>
+                <p class="footer__location">📍 Moratuwa, Sri Lanka</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SVG Filter for liquid distortion -->
+    <svg class="svg-filters" aria-hidden="true">
+        <defs>
+            <filter id="liquid-distortion">
+                <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" seed="2"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <script src="app.js"></script>
+</body>
+</html>
