@@ -153,153 +153,11 @@
   }
 
   /* ─────────────────────────────────────────
-     5. SKILLS CONSTELLATION CANVAS
+     5. DUAL-CORE SKILLS — Frontier Orb Stagger
      ───────────────────────────────────────── */
-  const skillsCanvas = $('#skills-canvas');
-  if (skillsCanvas) {
-    const sCtx = skillsCanvas.getContext('2d');
-    let skillOrbs = [];
-    let sMouse = { x: skillsCanvas.offsetWidth / 2, y: skillsCanvas.offsetHeight / 2 };
-
-    const SKILLS = [
-      'Java', 'JavaScript', 'TypeScript', 'Python',
-      'Spring', 'React', 'Next.js', 'Node.js',
-      'Oracle SQL', 'MySQL', 'DGraph', 'Qdrant',
-      'AI / LLM', 'LangGraph', 'Docker', 'AWS',
-      'Jenkins', 'Git'
-    ];
-
-    const COLORS = [
-      '#6366f1', '#818cf8', '#a78bfa', '#c084fc',
-      '#f472b6', '#22d3ee', '#34d399', '#fbbf24'
-    ];
-
-    function resizeSkillsCanvas() {
-      skillsCanvas.width = skillsCanvas.offsetWidth * window.devicePixelRatio;
-      skillsCanvas.height = skillsCanvas.offsetHeight * window.devicePixelRatio;
-      sCtx.scale(window.devicePixelRatio, window.devicePixelRatio);
-    }
-    resizeSkillsCanvas();
-    window.addEventListener('resize', resizeSkillsCanvas);
-
-    class SkillOrb {
-      constructor(text, index) {
-        this.text = text;
-        this.baseRadius = rand(28, 44);
-        this.radius = this.baseRadius;
-        this.x = rand(80, skillsCanvas.offsetWidth - 80);
-        this.y = rand(80, skillsCanvas.offsetHeight - 80);
-        this.vx = rand(-0.4, 0.4);
-        this.vy = rand(-0.4, 0.4);
-        this.color = COLORS[index % COLORS.length];
-        this.glowIntensity = rand(0.15, 0.35);
-        this.phase = rand(0, Math.PI * 2);
-      }
-      update(mousePos) {
-        const w = skillsCanvas.offsetWidth;
-        const h = skillsCanvas.offsetHeight;
-
-        // Drift
-        this.x += this.vx;
-        this.y += this.vy;
-
-        // Pulse
-        this.radius = this.baseRadius + Math.sin(Date.now() / 1200 + this.phase) * 4;
-
-        // Mouse attraction
-        const dx = mousePos.x - this.x;
-        const dy = mousePos.y - this.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 250 && dist > 0) {
-          const force = 0.5 / dist;
-          this.vx += dx * force;
-          this.vy += dy * force;
-        }
-
-        // Damping
-        this.vx *= 0.985;
-        this.vy *= 0.985;
-
-        // Bounds
-        if (this.x < this.radius) { this.x = this.radius; this.vx *= -0.6; }
-        if (this.x > w - this.radius) { this.x = w - this.radius; this.vx *= -0.6; }
-        if (this.y < this.radius) { this.y = this.radius; this.vy *= -0.6; }
-        if (this.y > h - this.radius) { this.y = h - this.radius; this.vy *= -0.6; }
-      }
-      draw(ctx) {
-        // Outer glow
-        const grd = ctx.createRadialGradient(this.x, this.y, this.radius * 0.4, this.x, this.y, this.radius * 2.5);
-        grd.addColorStop(0, this.color + '30');
-        grd.addColorStop(1, this.color + '00');
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius * 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = grd;
-        ctx.fill();
-
-        // Orb body
-        const bodyGrd = ctx.createRadialGradient(this.x - this.radius * 0.2, this.y - this.radius * 0.2, 0, this.x, this.y, this.radius);
-        bodyGrd.addColorStop(0, this.color + 'cc');
-        bodyGrd.addColorStop(0.7, this.color + '66');
-        bodyGrd.addColorStop(1, this.color + '20');
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = bodyGrd;
-        ctx.fill();
-
-        // Border ring
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.strokeStyle = this.color + '50';
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-
-        // Text
-        ctx.fillStyle = '#fff';
-        ctx.font = `500 ${Math.max(10, this.radius * 0.35)}px 'Space Grotesk', sans-serif`;
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(this.text, this.x, this.y);
-      }
-    }
-
-    SKILLS.forEach((s, i) => skillOrbs.push(new SkillOrb(s, i)));
-
-    skillsCanvas.addEventListener('mousemove', (e) => {
-      const rect = skillsCanvas.getBoundingClientRect();
-      sMouse.x = e.clientX - rect.left;
-      sMouse.y = e.clientY - rect.top;
-    });
-    skillsCanvas.addEventListener('mouseleave', () => {
-      sMouse.x = skillsCanvas.offsetWidth / 2;
-      sMouse.y = skillsCanvas.offsetHeight / 2;
-    });
-
-    function drawConnections() {
-      for (let i = 0; i < skillOrbs.length; i++) {
-        for (let j = i + 1; j < skillOrbs.length; j++) {
-          const a = skillOrbs[i], b = skillOrbs[j];
-          const dx = a.x - b.x, dy = a.y - b.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 180) {
-            sCtx.beginPath();
-            sCtx.moveTo(a.x, a.y);
-            sCtx.lineTo(b.x, b.y);
-            sCtx.strokeStyle = `rgba(99,102,241,${(1 - dist / 180) * 0.12})`;
-            sCtx.lineWidth = 1;
-            sCtx.stroke();
-          }
-        }
-      }
-    }
-
-    function animateSkills() {
-      sCtx.clearRect(0, 0, skillsCanvas.offsetWidth, skillsCanvas.offsetHeight);
-      drawConnections();
-      skillOrbs.forEach((orb) => { orb.update(sMouse); orb.draw(sCtx); });
-      requestAnimationFrame(animateSkills);
-    }
-    animateSkills();
-  }
+  $$('.skill-orb--frontier').forEach((orb, i) => {
+    orb.style.setProperty('--i', i);
+  });
 
   /* ─────────────────────────────────────────
      6. CRT RANDOM FLICKER
@@ -344,32 +202,7 @@
   );
   timelineDots.forEach((dot) => dotObserver.observe(dot));
 
-  /* ─────────────────────────────────────────
-     9. SKILL TAGS PARALLAX REVEAL
-     ───────────────────────────────────────── */
-  const skillTags = $$('.skills__list span');
-  skillTags.forEach((tag, i) => {
-    tag.style.transitionDelay = `${i * 0.04}s`;
-    tag.style.opacity = '0';
-    tag.style.transform = 'translateY(20px)';
-  });
 
-  const skillListObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          skillTags.forEach((tag) => {
-            tag.style.opacity = '1';
-            tag.style.transform = 'translateY(0)';
-          });
-          skillListObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-  const skillsList = $('.skills__list');
-  if (skillsList) skillListObserver.observe(skillsList);
 
   /* ─────────────────────────────────────────
      10. PROGRESS BAR ANIMATION
